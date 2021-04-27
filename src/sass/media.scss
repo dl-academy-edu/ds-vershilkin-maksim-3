@@ -1,0 +1,141 @@
+// Flexible grid
+
+$columns: 12;
+$gap: 20px;
+
+$xl: 1280px;
+$l: 990px;
+$m: 768px;
+$s: 580px;
+
+
+@mixin interval($min,$max) {
+
+  @if $max == 0 {
+    $max: 9999px;
+  }
+
+  @media (min-width: ($min+1px)) and (max-width: $max) {
+    @content;
+  }
+
+}
+
+@mixin grid($type-width, $media-size) {
+
+  @if $media-size == "full" {
+
+    .container {
+      max-width: 100%;
+    }
+
+  } @else {
+
+    .container {
+      max-width: $media-size - $gap*2;
+    }
+
+  }
+
+  @for $i from 1 through $columns {
+
+    .col-#{$type-width}-#{$i} {
+      width: (100% / $columns) * $i;
+    }
+
+    .skip-#{$type-width}-#{$i} {
+      margin-left: (100% / $columns) * $i;
+    }
+
+    .add-#{$type-width}-#{$i} {
+      margin-right: (100% / $columns) * $i;
+    }
+
+  }
+
+}
+
+@include interval($xl, 0) {
+  @include grid(xl, $xl)
+}
+
+@include interval($l, $xl) {
+  @include grid(l, $l)
+}
+
+@include interval($m, $l) {
+  @include grid(m, $m)
+}
+
+@include interval($s, $m) {
+  @include grid(s, $s)
+}
+
+@include interval(0, $s) {
+  @include grid(xs, "full")
+}
+
+.container {
+  // Block model
+  padding-left: $gap;
+  padding-right: $gap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-fluid {
+  // Block model
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: $gap;
+  padding-right: $gap;
+}
+
+.row {
+  // Position
+  display: flex;
+  // Block model
+  margin: (-$gap) (-$gap/2) 0 (-$gap/2);
+}
+
+.col {
+  // Position
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.flex-wrap {
+  // Position
+  flex-wrap: wrap;
+}
+
+li[class*="col"] {
+  // Block model
+  box-sizing: border-box;
+  padding: $gap ($gap/2) 0 ($gap/2);
+}
+
+div[class*="col"] {
+  // Block model
+  box-sizing: border-box;
+  padding: $gap ($gap/2) 0 ($gap/2);
+}
+
+
+.content {
+  // Position
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  // Block model
+  padding: 40px 0 40px 40px;
+  box-sizing: border-box;
+  height: 400px;
+
+  @media (max-width:580px) {
+    // Block model
+    height: auto;
+    padding: 20px;
+  }
+
+}

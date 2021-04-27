@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="keywords" content="танцы, рисование, изобразительное искусство, актёрское мастерство, хореография, музыка">
+  <link href="./css/common.css" rel="preload" onload="this.rel='stylesheet'" as="style" media="all"/>
+  <link href="./css/common.css" rel="stylesheet" />
+  <link href="./css/pages/main.css" rel="preload" onload="this.rel='stylesheet'" as="style" media="all"/>
+  <link href="./css/pages/main.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="/imgs/img_icon_favicon.svg">
+  <meta name="description" content="Главная страница личного проекта.">
+  <title>Главная страница личного проекта.</title>
+</head>
+<body>
+
+  <include src="./src/sass/components/header/header.html"></include>
+
+  <main class="main">
+
+    <section class="slider">
+
+      <div class="slider__wrap container">
+
+        <picture>
+
+          <source media="(max-width:380px)" srcset="./imgs/img_slide_1_phone.jpg, ./imgs/img_slide_1_phone.jpg 2x">
+          <source media="(max-width:990px)" srcset="./imgs/img_slide_1_tablet.jpg, ./imgs/img_slide_1_tablet.jpg 2x">
+          <img class="slider__img" src="./imgs/img_slide_1.jpg" srcset="./imgs/img_slide_1.jpg, ./imgs/img_slide_1.jpg 2x" alt="Фотография слайдера №1"/>
+
+        </picture>
+
+        <div class="slider__nav">
+
+          <button class="slider__button slider__button--left" type="button" name="previous">Предыдущий слайд</button>
+
+          <ul class="slider__list">
+
+            <li class="slider__list-item">
+              <button class="slider__list-button slider__list-button--active" type="button" name="dot">Первый слайд</button>
+            </li>
+
+            <li class="slider__list-item">
+              <button class="slider__list-button" type="button" name="dot">Второй слайд</button>
+            </li>
+
+            <li class="slider__list-item">
+              <button class="slider__list-button" type="button" name="dot">Третий слайд</button>
+            </li>
+
+            <li class="slider__list-item">
+              <button class="slider__list-button" type="button" name="dot">Четвёртый слайд</button>
+            </li>
+
+          </ul>
+
+          <button class="slider__button slider__button--next" type="button" name="next">Следующий слайд</button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="about">
+
+      <div class="about__wrap container">
+
+        <h2 class="about__title title">Обо мне</h2>
+
+        <p class="about__text">
+          Привет! Меня зовут Максим, я начинающий разработчик и почётный член баготворительного общества.
+        </p>
+
+        <p class="about__text">
+          На текущий момент я прохожу третий модуль от компании Direct Line в формате удалённого обучения. Планирую успешно его завершить и получить соответсвующий сертификат.
+        </p>
+
+        <p class="about__text">
+          Хотел бы развиваться в области управления проектами различного уровня сложности с использованием информационных технологий и современного инструментария.
+        </p>
+
+      </div>
+
+    </section>
+
+    <section class="skills">
+
+      <div class="skills__wrap container">
+
+        <h2 class="skills__title title">
+          Навыки
+        </h2>
+
+        <p class="skills__text">
+          Я умею использовать следующие технологии:
+        </p>
+
+        <ul class="skills__list">
+
+          <li class="skills__list-item">
+
+            <picture>
+              <source src="./imgs/img_icon_html5.svg" type="images/svg+xml">
+              <img class="skills__list-img" src="./imgs/img_icon_html5.svg" alt="Значок Html5">
+            </picture>
+
+            <span class="skills__list-label">
+              HTML5
+            </span>
+
+            <div class="skills__data">
+              <span class="skills__data-indicator">
+                85%
+              </span>
+              <div class="skills__data-progress skills__data-progress--first"></div>
+            </div>
+
+          </li>
+
+          <li class="skills__list-item">
+
+            <picture>
+              <source src="./imgs/img_icon_css3.svg" type="images/svg+xml">
+              <img class="skills__list-img" src="./imgs/img_icon_css3.svg" alt="Значок CSS3">
+            </picture>
+
+            <span class="skills__list-label">
+              CSS3/SCSS
+            </span>
+
+            <div class="skills__data">
+              <span class="skills__data-indicator">
+                55%
+              </span>
+              <div class="skills__data-progress skills__data-progress--second"></div>
+            </div>
+
+          </li>
+
+          <li class="skills__list-item">
+
+            <picture>
+              <source src="./imgs/img_icon_js.svg" type="images/svg+xml">
+              <img class="skills__list-img" src="./imgs/img_icon_js.svg" alt="Значок Javascript">
+            </picture>
+
+            <span class="skills__list-label">
+              Javascript
+            </span>
+
+            <div class="skills__data">
+              <span class="skills__data-indicator">
+                5%
+              </span>
+              <div class="skills__data-progress skills__data-progress--third"></div>
+            </div>
+
+          </li>
+
+          <li class="skills__list-item">
+
+            <picture>
+              <source src="./imgs/img_icon_git.svg" type="images/svg+xml">
+              <img class="skills__list-img" src="./imgs/img_icon_git.svg" alt="Значок GitHub">
+            </picture>
+
+            <span class="skills__list-label">
+              Git/GitHub
+            </span>
+
+            <div class="skills__data">
+              <span class="skills__data-indicator">
+                15%
+              </span>
+              <div class="skills__data-progress skills__data-progress--fourth"></div>
+            </div>
+
+          </li>
+
+          <li class="skills__list-item">
+
+            <picture>
+              <source src="./imgs/img_icon_figma.svg" type="images/svg+xml">
+              <img class="skills__list-img" src="./imgs/img_icon_figma.svg" alt="Значок Figma">
+            </picture>
+
+            <span class="skills__list-label">
+              Figma
+            </span>
+
+            <div class="skills__data">
+              <span class="skills__data-indicator">
+                80%
+              </span>
+              <div class="skills__data-progress skills__data-progress--fifth"></div>
+            </div>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+    <section class="portfolio">
+
+      <div class="portfolio__wrap container">
+
+        <h2 class="portfolio__title title">Портфолио</h2>
+
+        <figure class="portfolio__figure">
+
+          <div class="portfolio__nav">
+
+            <button class="portfolio__nav-left" type="button" name="previous">
+              Предыдущий проект
+            </button>
+
+            <button class="portfolio__nav-right" type="button" name="next">
+              Следующией проект
+            </button>
+
+          </div>
+
+          <picture class="portfolio__picture">
+            <source media="(max-width:480px)" srcset="./imgs/img_project_1_phone.jpg, ./imgs/img_project_1_phone_x2.jpg 2x">
+            <source media="(max-width:990px)" srcset="./imgs/img_project_1_tablet.jpg, ./imgs/img_project_1_tablet_x2.jpg 2x">
+            <img class="portfolio__image" src="./imgs/img_project_1.jpg" srcset="./imgs/img_project_1.jpg, ./imgs/img_project_1_x2.jpg 2x" alt="Изображение проекта DLK">
+          </picture>
+
+          <figcaption class="portfolio__description">
+
+            <a class="portfolio__description-title" href="/">
+              Учебный проект от DLAcademy
+            </a>
+
+            <p class="portfolio__description-text">
+              Простой многостраничный статический сайт. Разработка дизайн-макета в Figma. Были использованы HTML и CSS.
+              Сайт адаптивный и кроссбраузерный, но без добавления интерактивности Javascript.
+            </p>
+
+          </figcaption>
+
+        </figure>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <include src="./src/sass/components/footer/footer.html"></include>
+
+  <section class="intake">
+
+    <div class="intake__wrap">
+
+        <h2 class="title intake__title">Личный кабинет</h2>
+
+        <button class="intake__close" type="button" name="close">Закрыть форму входа</button>
+
+        <form class="intake__form" action="index.html" method="post">
+
+          <label class="label intake__label" for="mail">Почта<sup class="intake__mark">*</sup></label>
+          <input class="input intake__input" id="mail" type="text" name="mail" value="">
+
+          <label class="label intake__label" for="pass">Пароль<sup class="intake__mark">*</sup></label>
+          <input class="input intake__input" id="pass" type="text" name="password" value="">
+
+          <button class="button-optional intake__button" type="submit" name="button">Войти</button>
+
+        </form>
+
+    </div>
+
+  </section>
+
+  <section class="registration">
+
+    <div class="registration__wrap">
+
+      <h2 class="title registration__title">Регистрация</h2>
+
+      <button class="registration__close" type="button" name="button">Закрыть форму регистрации</button>
+
+      <form class="registration__form" action="index.html" method="post">
+
+        <div class="registration__item registration__item--wide">
+
+          <label class="label registration__label" for="reg_mail">
+            Почта <sup class="registration__mark">*</sup>
+          </label>
+
+          <input class="input registration__input" id="reg_mail" type="text" name="mail" value="">
+
+        </div>
+
+        <div class="registration__line">
+
+          <div class="registration__item">
+
+            <label class="label registration__label" for="reg_name">
+              Имя <sup class="registration__mark">*</sup>
+            </label>
+
+            <input class="input registration__input" id="reg_name" type="text" name="name" value="">
+
+          </div>
+
+          <div class="registration__item">
+
+          <label class="label registration__label" for="reg_surname">
+            Фамилия <sup class="registration__mark">*</sup>
+          </label>
+
+          <input class="input registration__input" id="reg_surname" type="text" name="surname" value="">
+
+        </div>
+
+        </div>
+
+        <div class="registration__line">
+
+          <div class="registration__item">
+
+            <label class="label registration__label" for="reg_pass">
+              Пароль <sup class="registration__mark">*</sup>
+            </label>
+
+            <input class="input registration__input" id="reg_pass" type="text" name="pass" value="">
+
+          </div>
+
+          <div class="registration__item">
+
+          <label class="label registration__label" for="reg_repeat">
+            Подтверидите пароль <sup class="registration__mark">*</sup>
+          </label>
+
+          <input class="input registration__input" id="reg_repeat" type="text" name="repeat" value="">
+
+        </div>
+
+        </div>
+
+        <div class="registration__line">
+
+          <div class="registration__item">
+
+            <label class="label registration__label" for="reg_location">
+              Местоположение <sup class="registration__mark">*</sup>
+            </label>
+
+            <input class="input registration__input" id="reg_location" type="text" name="location" value="">
+
+          </div>
+
+          <div class="registration__item">
+
+          <label class="label registration__label" for="reg_age">
+            Возраст <sup class="registration__mark">*</sup>
+          </label>
+
+          <input class="input registration__input" id="reg_age" type="text" name="age" value="">
+
+        </div>
+
+        </div>
+
+        <div class="registration__agreement">
+
+          <input class="registration__agreement-input" id="reg_processing" type="checkbox" name="processing" value="">
+          <label class="registration__agreement-label" for="reg_processing">
+            Clicking on the button, you consent to the processing of your personal data.
+          </label>
+
+        </div>
+
+        <button class="button-optional registration__button registration__button--disabled" type="submit" name="button">Готово</button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <script type="module" src="./js/index.js"></script>
+
+</script>
+
+</html>
