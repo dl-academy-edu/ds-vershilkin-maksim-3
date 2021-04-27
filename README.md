@@ -1,1 +1,3 @@
-# ds-vershilkin-maksim-3
+# Личный проект "JS"
+* Студент [Вершилкин Максим](https://t.me/MaxCookie)
+* Наставник [Дмитрий Шишкалов](https://t.me/Dmitry_Sh64)
