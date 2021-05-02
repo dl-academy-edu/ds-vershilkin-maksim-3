@@ -607,7 +607,7 @@
   // Position
   position: absolute;
   top:0;
-  display: flex; // flex
+  display: none; // flex
   justify-content: center;
   align-items: center;
   // Block model
@@ -696,6 +696,15 @@
       outline: none;
     }
 
+  }
+
+  &__label {
+
+  }
+
+  &__mark {
+    // Typography
+    color: $color_optional-4;
   }
 
   &__item {
@@ -840,6 +849,237 @@
         color: $color_black;
         cursor: not-allowed;
         background-color: $color_white;
+      }
+
+    }
+
+  }
+
+}
+
+.message {
+  // Position
+  position: absolute;
+  top:0;
+  display: flex; // flex
+  justify-content: center;
+  align-items: center;
+  // Block model
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  // Stylization
+  background-color: $color_optional-0;
+
+  &__wrap {
+    // Position
+    position: relative;
+
+    @media (max-width:690px) {
+      // Block model
+      width: 100%;
+    }
+  }
+
+  &__title {
+    // Typography
+    font-size: 0;
+  }
+
+  &__close {
+    // Position
+    position: absolute;
+    top: 0;
+    right: -36px;
+    // Block model
+    width: 26px;
+    height: 26px;
+    // Typography
+    font-size: 0;
+    // Stylization
+    opacity: 0.25;
+    background: url("/imgs/img_icon_feedback_close.svg") center no-repeat;
+    // Animation
+    transition: opacity ease-in .4s;
+
+    @media (max-width:770px) {
+      // Position
+      top: 20px;
+      left: 20px;
+    }
+
+    &:hover {
+      // Stylization
+      cursor: pointer;
+      opacity: .4;
+      outline: none;
+    }
+
+    &:focus {
+      // Stylization
+      opacity: 1 ;
+      outline: none;
+    }
+
+  }
+
+  &__form {
+    // Position
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    // Block model
+    width: 680px;
+    padding: 40px;
+    box-sizing: border-box;
+    // Stylization
+    outline: solid 2.5px $color_black;
+    background-color: $color_white;
+
+    @media (max-width:690px) {
+      // Block model
+      width: auto;
+      padding: 60px 20px 20px 20px;
+      // Stylization
+      outline: none;
+    }
+  }
+
+  &__mark {
+    // Typography
+    color: $color_optional-4;
+  }
+
+  &__item {
+    // Position
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    // Block model
+    width: 50%;
+    margin: 0 20px 0 0;
+    box-sizing: border-box;
+
+    @media (max-width:480px) {
+      // Block model
+      width: 100%;
+    }
+
+    &:nth-child(even) {
+      // Block model
+      margin-right: 0;
+    }
+
+    &--wide {
+      // Block model
+      width: 100%;
+    }
+
+  }
+
+  &__line {
+    // Position
+    display: flex;
+    // Block model
+    width: 100%;
+
+    @media (max-width:480px) {
+      // Position
+      flex-flow: column;
+    }
+  }
+
+  &__agreement {
+    // Position
+    position: relative;
+    // Block model
+    margin: 0 0 20px 0;
+
+    &--disabled {
+        // Stylization
+        cursor: not-allowed;
+        opacity: .1;
+
+        &:hover > .message__processing, .message__label {
+          // Stylization
+          cursor: inherit;
+        }
+    }
+
+    &:checked {
+      // Typography
+      text-decoration: underline;
+    }
+
+    &-label {
+      // Position
+      position: relative;
+      // Block model
+      margin: 0 0 0 33px;
+
+      &:hover {
+        // Typography
+        text-decoration: underline;
+        // Stylization
+        cursor: pointer;
+      }
+
+      &::after {
+        // Position
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -33px;
+        // Block model
+        width: 14px;
+        height: 14px;
+        // Stylization
+        border-radius: 2px;
+        border: solid 2px $color_black;
+      }
+
+      &::before {
+        // Position
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: -30px;
+        // Block model
+        width: 12px;
+        height: 12px;
+        // Stylization
+        opacity: 0;
+        background-color: $color_black;
+        // Animation
+        transition: opacity ease-in .4s;
+      }
+    }
+
+    &-input {
+      // Position
+      position: absolute;
+      left: 0;
+      // Stylization
+      opacity: 0;
+
+      &:focus + .message__agreement-label {
+        // Typography
+        text-decoration: underline;
+      }
+
+      &:hover + .message__agreement-label {
+        // Stylization
+        pointer: cursor;
+      }
+
+      &:checked + .message__agreement-label {
+        // Typography
+        // text-decoration: underline;
+      }
+
+      &:checked + .message__agreement-label::before {
+        // Stylization
+        opacity: 1;
       }
 
     }
