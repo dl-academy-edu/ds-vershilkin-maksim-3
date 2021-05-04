@@ -1,0 +1,133 @@
+@import "variables.scss";
+// @import "media.scss";
+// @import "mixins.scss";
+@import "components/buttons/buttons";
+@import "components/header/header";
+@import "components/footer/footer";
+
+:root {
+  // Typography
+  font-size: 16px;
+}
+
+
+body {
+  // Typography
+  font-family: $font-primary;
+  font-weight: 500;
+}
+
+::after, ::before {
+  margin: 0;
+  padding: 0;
+}
+
+body, p, h1, h2, h3, h4, h5, h6, figure, button {
+  // Block model
+  margin: 0;
+  padding: 0;
+  // Typography
+  font-weight: normal;
+  // Stylization
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container {
+  // Block model
+  max-width: 1180px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (max-width: 1300px) {
+    // Block model
+    max-width: none;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  @media (max-width: 580px) {
+    // Block model
+    max-width: none;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+}
+
+// Text elements
+.title {
+  // Typography
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+
+  @media (max-width:990px) {
+    // Typography
+    font-size: 36px;
+  }
+}
+
+.divider {
+  // Block model
+  width: 140px;
+  height: 1px;
+  margin: 40px 0;
+  // Stylization
+  background-color: $color_optional-1;
+
+}
+
+.hidden {
+  // Position
+  display: none;
+  // Stylization
+  opacity: 1;
+  // Animation
+  transition: all ease-in .4s;
+}
+
+// Form elements
+.label {
+  // Block model
+  margin: 0 0 10px 0;
+  // Typography
+  font-size: 14px;
+}
+
+.input {
+  // Position
+  display: flex;
+  align-self: stretch;
+  // Block model
+  margin: 0 0 20px 0;
+  padding: 14px;
+  // Stylization
+  border: 0;
+  outline-offset: -2.5px;
+  outline: solid 2.5px $color_optional-2;
+  // Animation
+  transition: outline ease-in .4s;
+
+  &:hover {
+    // Stylization
+    cursor: pointer;
+    outline-color: $color_optional-1;
+  }
+
+  &:focus {
+    // Stylization
+    outline-color: $color_black;
+  }
+
+}

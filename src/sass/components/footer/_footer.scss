@@ -1,0 +1,68 @@
+// Footer
+
+.footer {
+
+
+  &__wrap {
+    // Position
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    // Block model
+    padding: 60px 0;
+  }
+
+  &__title {
+    // Block model
+    margin: 0 0 20px 0;
+  }
+
+  &__question {
+    // Block model
+    margin: 0 0 30px 0;
+    // Typography
+    text-align: center;
+  }
+
+  &__social {
+    // Position
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    // Block model
+    width: 320px;
+    margin: 0 0 30px 0;
+
+    @media (max-width:320px) {
+      // Block model
+      width: auto;
+    }
+
+    &-link {
+      // Position
+      display: block;
+      // Block model
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__design {
+    // Typography
+    color: $color_optional-1;
+    // Block model
+    margin: 0 0 5px 0;
+
+    &-link {
+      // Typography
+      color: inherit;
+      text-decoration: underline;
+      // Animation
+      transition: color ease-in .4s;
+
+      &:hover {
+        // Typography
+        color: $color_black;
+      }
+    }
+  }
+}

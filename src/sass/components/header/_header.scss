@@ -1,0 +1,193 @@
+// Header
+
+.header {
+
+  &__wrap {
+    // Block model
+    padding: 33px 0 0 0;
+
+  }
+
+  &__nav {
+    // Posisiton
+    position: relative;
+    display: flex;
+    // Block model
+    margin: 0 0 40px 0;
+    padding: 0 0 33px 0;
+
+    @media (max-width:500px) {
+      // Position
+      display: none;
+    }
+
+    &::after {
+      // Position
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      // Block model
+      width: 100%;
+      height: 1px;
+      // Stylization
+      background-color: $color_optional-1;
+    }
+  }
+
+  &__item {
+    // Block model
+    margin-left: 20px;
+
+    &:first-of-type {
+      // Position
+      flex: auto;
+      // Block model
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    // Typography
+    color: $color_optional-1;
+    // Animation
+    transition: color ease-in .4s;
+
+    &:hover {
+      // Typography
+      color: $color_black;
+    }
+
+    &--dark {
+      // Typography
+      color: $color_black;
+    }
+  }
+
+  &__about {
+    // Position
+    display: flex;
+    align-items: last baseline;
+
+    @media (max-width:500px) {
+      // Position
+      flex-flow: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    // Block model
+    margin: 0 40px 0 0;
+    // Typography
+    font-size: 47px;
+    font-weight: bold;
+
+    @media (max-width:500px) {
+      // Block model
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__bio {
+    // Position
+    display: block;
+
+    @media (max-width:500px) {
+      // Position
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: space-between;
+      // Block model
+      width: 100%;
+    }
+  }
+
+  &__text {
+    // Block model
+    width: 226px;
+    // Typography
+    font-size: 18px;
+
+    @media (max-width:640px) {
+      // Block model
+      width: auto;
+    }
+  }
+
+  &__button {
+    // Position
+    display: none;
+    // Block model
+    width: 38px;
+    height: 20px;
+    // Typography
+    font-size: 0;
+    // Stylization
+    background: url("/imgs/img_icon_mobile.svg") center no-repeat;
+
+    @media (max-width:500px) {
+      // Position
+      display: block;
+      // justify-content: flex-end;
+      // flex: 1;
+    }
+  }
+
+  &__mobile {
+    // Position
+    position: fixed;
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    top: 0;
+    left: 0;
+    // Block model
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 999;
+    // Stylization
+    background-color: $color_optional-0;
+
+    &-button {
+      // Posistion
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      // Block model
+      width: 25px;
+      height: 25px;
+      // Typography
+      font-size: 0;
+      // Stylization
+      background: url("/imgs/img_icon_close.svg") center no-repeat;
+    }
+
+    &-list {
+      // Typography
+      text-align: right;
+    }
+
+    &-link {
+      // Position
+      display: block;
+      // Block model
+      margin: 0 0 40px 0;
+      // Typography
+      color: $color_optional-1;
+      font-size: 34px;
+      font-weight: bold;
+
+      &--active {
+        // Typography
+        color: $color_black;
+      }
+
+    }
+
+  }
+
+}

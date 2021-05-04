@@ -1,0 +1,32 @@
+// Typography
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/gilroy/gilroy_medium.woff2') format('woff2'),
+        url('/fonts/gilroy/gilroy_medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/gilroy/gilroy_bold.woff2') format('woff2'),
+        url('/fonts/gilroy/gilroy_bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+$font-primary: "Gilroy", "Arial", sans-serif;
+
+// Color scheme
+$color_black: #000000;
+$color_white: #ffffff;
+
+$color_optional-1: #828282;
+$color_optional-2: #E5E5E5;
+$color_optional-3: #F6F6F6;
+$color_optional-4: #EB3617;
+$color_optional-0: rgba(246, 246, 246, 0.99);
+
+$color_shadow: rgba(0,0,0,0.15);

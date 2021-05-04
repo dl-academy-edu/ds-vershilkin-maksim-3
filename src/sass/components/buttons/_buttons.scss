@@ -1,0 +1,53 @@
+// Buttons
+.button {
+  // Block model
+  margin: 0 0 50px 0;
+  padding: 10px 30px;
+  // Typography
+  color: $color_white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: $font-primary;
+  // Stylization
+  cursor: pointer;
+  border-radius: 25px;
+  border: solid 2px $color_black;
+  background-color: $color_black;
+  // Animation
+  transition: color ease-in .4s,
+              background-color ease-in .4s;
+
+  &:hover {
+    // Typography
+    color: $color_black;
+    // Stylization
+    cursor: pointer;
+    background-color: $color_white;
+  }
+}
+
+.button-optional {
+  // Position
+  display: inherit;
+  // Block model
+  padding: 10px 20px;
+  // Typography
+  color: $color_black;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: $font-primary;
+  // Stylization
+  cursor: pointer;
+  border-radius: 25px;
+  border: solid 2px $color_black;
+  // Animation
+  transition: color ease-in .4s,
+              background-color ease-in .4s;
+
+  &:hover {
+    // Typography
+    color: $color_white;
+    // Stylization
+    background-color: $color_black;
+  }
+}
