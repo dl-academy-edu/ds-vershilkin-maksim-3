@@ -1,0 +1,135 @@
+// Profile
+@import "../common.scss";
+
+.subheader {
+
+  &__about {
+    // Position
+    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  &__title {
+    // Block model
+    margin: 0 0 40px 0;
+    // Typography
+    text-align: left;
+    font-size: 47px;
+    font-weight: bold;
+
+    @media (max-width:500px) {
+      // Block model
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__button {
+    // Position
+    display: none;
+    // Block model
+    width: 38px;
+    height: 20px;
+    // Typography
+    font-size: 0;
+    // Stylization
+    background: url("/imgs/img_icon_mobile.svg") center no-repeat;
+
+    @media (max-width:500px) {
+      // Position
+      display: block;
+      // justify-content: flex-end;
+      // flex: 1;
+    }
+  }
+
+}
+
+.information {
+  // Block model
+  padding: 0 0 60px 0;
+
+  &__wrap {
+    // Position
+    display: flex;
+    flex-flow: row;
+
+    @media (max-width:768px) {
+      // Position
+      flex-flow: column;
+    }
+  }
+
+  &__photo {
+    // Position
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // Block model
+    width: 320px;
+    height: 450px;
+    margin-right: 105px;
+    // Stylization
+    box-shadow: $color_optional-2 0 4px 20px 0;
+    background: $color_optional-2 url("/imgs/img_icon_photo.svg") center no-repeat;
+
+    @media (max-width:990px) {
+      // Block model
+      margin-right: 75px;
+    }
+
+    @media (max-width:768px) {
+      // Block model
+      margin: 0 0 40px 0;
+    }
+
+    @media (max-width:360px) {
+      // Block model
+      width: auto;
+    }
+  }
+
+  &__label {
+    // Block model
+    margin-right: 15px;
+  }
+
+  &__input {
+    // Typography
+    font-family: $font-primary;
+    font-size: inherit;
+    // Stylization
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+      // Stylization
+      outline: none;
+    }
+  }
+
+  &__button {
+    // Block model
+    margin: 0 0 20px 0;
+
+    &:last-of-type {
+      // Block model
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+
+    &-item {
+      // Position
+      display: flex;
+      justify-content: flex-start;
+      // Block model
+      margin: 0 0 20px 0;
+      // Typography
+      font-size: 18px;
+    }
+  }
+
+}

@@ -1,0 +1,273 @@
+// Blog
+@import "../common.scss";
+
+.subheader {
+
+  &__about {
+    // Position
+    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  &__title {
+    // Block model
+    margin: 0 0 40px 0;
+    // Typography
+    text-align: left;
+    font-size: 47px;
+    font-weight: bold;
+
+    @media (max-width:500px) {
+      // Block model
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__button {
+    // Position
+    display: none;
+    // Block model
+    width: 38px;
+    height: 20px;
+    // Typography
+    font-size: 0;
+    // Stylization
+    background: url("/imgs/img_icon_mobile.svg") center no-repeat;
+
+    @media (max-width:500px) {
+      // Position
+      display: block;
+      // justify-content: flex-end;
+      // flex: 1;
+    }
+  }
+
+}
+
+.filter {
+
+  &__input {
+
+    &--tag {
+      // Stylization
+      border: solid 2px red;
+    }
+
+  }
+
+  &__settings {
+    // Position
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    // Block model
+    margin: 0 0 35px 0;
+
+    &-field {
+      // Block model
+      padding: 0;
+      // Stylization
+      border: none;
+    }
+
+    &-legend {
+      // Block model
+      margin: 0 0 10px 0;
+      // Typography
+      font-size: 14px;
+    }
+
+    &-list {
+      // Position
+      display: flex;
+      flex-flow: column;
+    }
+
+    &-views {
+      // Position
+      display: flex;
+      flex-flow: column;
+    }
+
+  }
+
+  &__search {
+    // Position
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    // Block model
+    margin-bottom: 20px;
+
+    &-text {
+      // Block model
+      width: 100%;
+      margin-right: 30px;
+      padding: 0 15px;
+      box-sizing: border-box;
+      // Typography
+      font-family: $font-primary;
+      font-size: inherit;
+      // Stylization
+      border: $color_optional-2 1px solid;
+      // Animation
+      transition: border-color ease-in .4s;
+
+      &:focus {
+        // Stylization
+        outline: none;
+        border: $color_black 1px solid;
+      }
+    }
+
+    &-button {
+
+    }
+
+  }
+
+}
+
+.articles {
+
+  &__article {
+    // Block model
+    margin-bottom: 20px;
+    padding-top: 20px;
+
+    // Stylization
+    border-top: solid 1px $color_optional-2;
+
+    &-wrap {
+      // Position
+      display: flex;
+      flex-flow: row nowrap;
+
+    }
+
+    &-photo {
+      // Block model
+      margin: 0 20px -4px 0;
+    }
+
+    &-information {
+      // Block model
+      padding: 20px 0 0 0;
+    }
+
+    &-tags {
+      // Position
+      display: flex;
+      // Block model
+      margin-bottom: 10px;
+
+    }
+
+    &-tag {
+      // Block model
+      width: 30px;
+      height: 10px;
+      margin-right: 5px;
+      // Stylization
+      border-radius: 15px;
+      background-color: $color_optional-2;
+
+      // @for $i from 1 through 8 {
+      //
+      //   &--color-#{$i}: {
+      //     background-color: red;
+      //   }
+      //
+      // }
+
+      &--color-1 {
+        background: $color_tag-1;
+      }
+
+      &--color-2 {
+        background: $color_tag-2;
+      }
+
+      &--color-3 {
+        background: $color_tag-3;
+      }
+
+      &--color-4 {
+        background: $color_tag-4;
+      }
+
+      &--color-5 {
+        background: $color_tag-5;
+      }
+
+      &--color-6 {
+        background: $color_tag-6;
+      }
+
+      &--color-7 {
+        background: $color_tag-7;
+      }
+
+      &--color-8 {
+        background: $color_tag-8;
+      }
+
+    }
+
+    &-indicators {
+      // Position
+      display: flex;
+      // Block model
+      margin-bottom: 15px;
+      // Typography
+      color: $color_optional-1;
+      font-size: 14px;
+
+      &-item {
+        // Block model
+        margin-right: 10px;
+      }
+    }
+
+    &-title {
+      // Block model
+      margin-bottom: 10px;
+      // Typography
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    &-text {
+      // Block model
+      margin-bottom: 20px;
+      // Typography
+      font-size: 18px;
+    }
+
+    &-link {
+      // Position
+      position: relative;
+      // Typography
+      color: inherit;
+      font-size: 18px;
+      font-weight: 700;
+
+      &::after {
+        // Position
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        // Block model
+        width: 100%;
+        height: 1px;
+        // Stylization
+        border-bottom: dashed 1px $color_black;
+      }
+    }
+
+  }
+
+}

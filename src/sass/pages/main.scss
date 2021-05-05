@@ -1,6 +1,90 @@
 // Index
 @import "../common.scss";
 
+.subheader {
+
+  &__about {
+    // Position
+    display: flex;
+    align-items: last baseline;
+
+    @media (max-width:500px) {
+      // Position
+      flex-flow: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    // Block model
+    margin: 0 40px 0 0;
+    // Typography
+    text-align: left;
+    font-size: 47px;
+    font-weight: bold;
+
+    @media (max-width:500px) {
+      // Block model
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__bio {
+    // Position
+    display: block;
+
+    @media (max-width:500px) {
+      // Position
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: space-between;
+      // Block model
+      width: 100%;
+    }
+  }
+
+  &__text {
+    // Block model
+    width: 226px;
+    // Typography
+    font-size: 18px;
+
+    @media (max-width:640px) {
+      // Block model
+      width: auto;
+    }
+  }
+
+  &__button {
+    // Position
+    display: none;
+    // Block model
+    width: 38px;
+    height: 20px;
+    // Typography
+    font-size: 0;
+    // Stylization
+    background: url("/imgs/img_icon_mobile.svg") center no-repeat;
+    // Animation
+    transition: opacity ease-in .4s;
+
+    @media (max-width:500px) {
+      // Position
+      display: block;
+      // justify-content: flex-end;
+      // flex: 1;
+    }
+
+    &:focus {
+      // Stylization
+      opacity: 0.5;
+      outline: none;
+    }
+  }
+
+}
+
 .slider {
   // Block model
   padding: 30px 0 60px 0;
@@ -660,6 +744,11 @@
       left: 20px;
     }
 
+    @media (max-width:690px) {
+      // Position
+      top: 20px;
+    }
+
     &:hover {
       // Stylization
       cursor: pointer;
@@ -691,7 +780,7 @@
     @media (max-width:690px) {
       // Block model
       width: auto;
-      padding: 20px;
+      padding: 60px 20px 20px 20px;
       // Stylization
       outline: none;
     }
@@ -861,7 +950,7 @@
   // Position
   position: absolute;
   top:0;
-  display: flex; // flex
+  display: none; // flex
   justify-content: center;
   align-items: center;
   // Block model
@@ -870,6 +959,11 @@
   z-index: 999;
   // Stylization
   background-color: $color_optional-0;
+
+  &--active {
+    // Position
+    display: flex;
+  }
 
   &__wrap {
     // Position
