@@ -91,6 +91,134 @@
       flex-flow: column;
     }
 
+    &-tags {
+      // Position
+      position: relative;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+    }
+
+    &-label {
+
+      &--tag {
+        // Position
+        position: relative;
+        // Block model
+        width: 17px;
+        height: 17px;
+        margin: 0 5px 5px 0;
+        // Typography
+        font-size: 0;
+        // Stylization
+        border-radius: 2px;
+        border: solid 2px $color_black;
+
+        &::after {
+          // Position
+          content: '';
+          position: absolute;
+          top: 1px;
+          left: 1px;
+          // Block model
+          width: 15px;
+          height: 15px;
+          // Stylization
+          background-color: none;
+        }
+
+        &[name="tag-1"] {
+          // Stylization
+          border: solid 2px $color_tag-1;
+        }
+
+        &[name="tag-2"] {
+          // Stylization
+          border: solid 2px $color_tag-2;
+        }
+
+        &[name="tag-3"] {
+          // Stylization
+          border: solid 2px $color_tag-3;
+        }
+
+        &[name="tag-4"] {
+          // Stylization
+          border: solid 2px $color_tag-4;
+        }
+
+        &[name="tag-5"] {
+          // Stylization
+          border: solid 2px $color_tag-5;
+        }
+
+        &[name="tag-6"] {
+          // Stylization
+          border: solid 2px $color_tag-6;
+        }
+
+        &[name="tag-7"] {
+          // Stylization
+          border: solid 2px $color_tag-7;
+        }
+
+        &[name="tag-8"] {
+          // Stylization
+          border: solid 2px $color_tag-8;
+        }
+
+      }
+
+    }
+
+    &-input {
+
+      &--tag {
+        // Position
+        position: absolute;
+        top: 0;
+        left: 0;
+        // Block model
+        width: 21px;
+        height: 21px;
+        margin: 0;
+        z-index: 1;
+        // Stylization
+        opacity: 0;
+
+        &:hover {
+          // Stylization
+          cursor: pointer;
+        }
+
+        &:checked + .filter__settings-label--tag::after {
+          // Stylization
+          background-color: grey;
+        }
+
+        // &:active + .filter__settings-label--tag::after {
+        //   // Stylization
+        //   background-color: red;
+        // }
+
+        @for $i from 1 through 4 {
+          &[name="tag-#{$i}"] {
+            // Position
+            left: #{($i - 1) * 26}px;
+          }
+        }
+
+        @for $i from 5 through 8 {
+          &[name="tag-#{$i}"] {
+            // Position
+            top: 26px;
+            left: #{($i - 5) * 26}px;
+          }
+        }
+
+      }
+
+    }
+
   }
 
   &__search {

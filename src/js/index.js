@@ -5,6 +5,6 @@ import {objects} from "./homework-3.js";
 document.addEventListener("DOMContentLoaded", () => {
 
   // numbers(50);
-  objects();
+  // objects();
 
 })
