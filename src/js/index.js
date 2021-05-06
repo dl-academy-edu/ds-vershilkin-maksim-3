@@ -1,5 +1,5 @@
 import {numbers} from "./homework-1.js";
-import {functions} from "./homework-1.js";
+import {functions} from "./homework-2.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
