@@ -136,6 +136,173 @@
 
   </main>
 
+  <section class="pass">
+
+    <div class="pass__wrap container">
+
+      <h2 class="pass__title title">
+        Форма смены пароля
+      </h2>
+
+      <button class="pass__close" type="button" name="button">
+        Закрыть форму
+      </button>
+
+      <form class="pass__form" action="index.html" method="post">
+
+        <div class="pass__item">
+
+          <label class="pass__label label" for="pass-previous">
+            Старый пароль
+            <sup class="pass__mark">*</sup>
+          </label>
+
+          <input class="pass__input input" id="pass-previous" type="text" name="previous" value="">
+
+        </div>
+
+        <div class="pass__item">
+
+          <label class="pass__label label" for="pass-new">
+            Новый пароль
+            <sup class="pass__mark">*</sup>
+          </label>
+
+          <input class="pass__input input" id="pass-new" type="text" name="previous" value="">
+
+        </div>
+
+        <div class="pass__item">
+
+          <label class="pass__label label" for="pass-confirm">
+            Повторите пароль
+            <sup class="pass__mark">*</sup>
+          </label>
+
+          <input class="pass__input input" id="pass-confirm" type="text" name="previous" value="">
+
+        </div>
+
+        <button class="pass__submit button-optional" type="sumbit" name="button">
+          Сменить пароль
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <section class="data">
+
+    <div class="data__wrap container">
+
+      <h2 class="data__title title">
+        Форма смены пароля
+      </h2>
+
+      <button class="data__close" type="button" name="button">
+        Закрыть форму
+      </button>
+
+      <form class="data__form" action="index.html" method="post">
+
+        <div class="data__item">
+
+          <label class="data__label label" for="data-mail">
+            Почта
+          </label>
+
+          <input class="data__input input" id="data-mail" type="text" name="mail" value="">
+
+        </div>
+
+        <div class="data__container">
+
+          <div class="data__item">
+
+            <label class="data__label label" for="data-name">
+              Имя
+            </label>
+
+            <input class="data__input input" id="data-name" type="text" name="name" value="">
+
+          </div>
+
+          <div class="data__item">
+
+            <label class="data__label label" for="data-surname">
+              Фамилия
+            </label>
+
+            <input class="data__input input" id="data-surname" type="text" name="surname" value="">
+
+          </div>
+
+        </div>
+
+        <div class="data__container">
+
+          <div class="data__item">
+
+            <label class="data__label label" for="data-location">
+              Местоположение
+            </label>
+
+            <input class="data__input input" id="data-location" type="text" name="location" value="">
+
+          </div>
+
+          <div class="data__item">
+
+            <label class="data__label label" for="data-age">
+              Возраст
+            </label>
+
+            <input class="data__input input" id="data-age" type="text" name="age" value="">
+
+          </div>
+
+        </div>
+
+        <div class="data__item data__item--shortened">
+
+          <label class="data__label label" for="data-image">
+            Изображения профиля
+          </label>
+
+          <input class="data__input data__input--file input" id="data-image" type="file" name="image" value="">
+
+        </div>
+
+        <button class="button-optional data__submit" type="sumbit" name="button">
+          Применить изменения
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <section class="message">
+
+    <div class="message__wrap container">
+
+      <h2 class="message__title title">
+        Статус отправки формы
+      </h2>
+
+      <button class="message__close" type="button" name="button">
+        Закрыть форму
+      </button>
+
+      <p class="message__text">Форма была отправлена, но сервер передал сообщение об ошибке: "Описание ошибки".</p>
+
+    </div>
+
+  </section>
+
   <script type="module" src="./js/index.js"></script>
 
 </script>
