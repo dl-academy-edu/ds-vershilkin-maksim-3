@@ -76,7 +76,9 @@ export function objects() {
 
         // Вывод сообщения.
         console.log(
-          `${data[i].name} - язык программирования выпущенный в ${data[i].year} году. Автором языка стал ${developers[i].name} - ${developers[i].work}.
+
+          `${data[i].name} - язык программирования выпущенный в ${data[i].year} году.
+                   Автором языка стал ${developers[i].name} - ${developers[i].work}.
                    Файлы программ, написанных на ${data[i].name}, могут иметь расширение: ${extensions}.
                    ${data[i].name} испытал влияние ${data[i].influencedBy.length} языков программирования: ${influencedLanguages}.
                    ${data[i].name} повлиял на: ${affectedlanguages}.`
