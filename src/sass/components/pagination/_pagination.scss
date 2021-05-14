@@ -1,0 +1,86 @@
+// Pagination styles
+
+.pagination {
+
+  &__wrap {
+    // Position
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__previous {
+    // Block model
+    width: 42px;
+    height: 42px;
+    // Typography
+    font-size: 0;
+    // Stylization
+    border-radius: 21px;
+    border: solid 2px $color_black;
+    background: url("/imgs/img_icon_pagination_arrow_left.svg") center no-repeat;
+    // Animation
+    transition: opacity ease-in .4s;
+
+    &:hover {
+      // Stylization
+      cursor: pointer;
+      opacity: .5;
+    }
+  }
+
+  &__list {
+    // Position
+    display: flex;
+
+    &-item {
+      // Block model
+      margin-right: 10px;
+
+      &:last-of-type {
+        // Block model
+        margin-right: 0;
+      }
+    }
+
+    &-page {
+      // Typography
+      font-size: 18px;
+      font-weight: bold;
+      // Stylization
+      opacity: .1;
+
+      &--active {
+        // Stylization
+        opacity: 1;
+      }
+
+      &:hover {
+        // Stylization
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__next {
+    // Block model
+    width: 42px;
+    height: 42px;
+    // Typography
+    font-size: 0;
+    // Stylization
+    border-radius: 21px;
+    border: solid 2px $color_black;
+    background: url("/imgs/img_icon_pagination_arrow_right.svg") center no-repeat;
+    // Animation
+    transition: opacity ease-in .4s;
+
+    &:hover {
+      // Stylization
+      cursor: pointer;
+      opacity: .5;
+    }
+  }
+
+}

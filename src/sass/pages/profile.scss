@@ -1,0 +1,484 @@
+// Profile
+@import "../common.scss";
+
+.subheader {
+
+  &__about {
+    // Position
+    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  &__title {
+    // Block model
+    margin: 0 0 40px 0;
+    // Typography
+    text-align: left;
+    font-size: 47px;
+    font-weight: bold;
+
+    @media (max-width:500px) {
+      // Block model
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__button {
+    // Position
+    display: none;
+    // Block model
+    width: 38px;
+    height: 20px;
+    // Typography
+    font-size: 0;
+    // Stylization
+    background: url("/imgs/img_icon_mobile.svg") center no-repeat;
+
+    @media (max-width:500px) {
+      // Position
+      display: block;
+      // justify-content: flex-end;
+      // flex: 1;
+    }
+  }
+
+}
+
+.information {
+  // Block model
+  padding: 0 0 60px 0;
+
+  &__wrap {
+    // Position
+    display: flex;
+    flex-flow: row;
+
+    @media (max-width:768px) {
+      // Position
+      flex-flow: column;
+    }
+  }
+
+  &__photo {
+    // Position
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // Block model
+    width: 320px;
+    height: 450px;
+    margin-right: 105px;
+    // Stylization
+    box-shadow: $color_optional-2 0 4px 20px 0;
+    background: $color_optional-2 url("/imgs/img_icon_photo.svg") center no-repeat;
+
+    @media (max-width:990px) {
+      // Block model
+      margin-right: 75px;
+    }
+
+    @media (max-width:768px) {
+      // Block model
+      margin: 0 0 40px 0;
+    }
+
+    @media (max-width:360px) {
+      // Block model
+      width: auto;
+    }
+  }
+
+  &__label {
+    // Block model
+    margin-right: 15px;
+  }
+
+  &__input {
+    // Typography
+    font-family: $font-primary;
+    font-size: inherit;
+    // Stylization
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+      // Stylization
+      outline: none;
+    }
+  }
+
+  &__button {
+    // Block model
+    margin: 0 0 20px 0;
+
+    &:last-of-type {
+      // Block model
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+
+    &-item {
+      // Position
+      display: flex;
+      justify-content: flex-start;
+      // Block model
+      margin: 0 0 20px 0;
+      // Typography
+      font-size: 18px;
+    }
+  }
+
+}
+
+.pass {
+  // Position
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  // Block model
+  width: 100%;
+  height: 100%;
+  // Stylization
+  background-color: $color_optional-0;
+
+  @media (max-width:370px) {
+    // Block model
+    width: 100%;
+    height: 100%;
+  }
+
+  &__wrap {
+    // Position
+    position: relative;
+
+    @media (max-width: 370px) {
+      // Block model
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+  }
+
+  &__title {
+    // Stylization
+    font-size: 0;
+  }
+
+  &__close {
+    // Position
+    position: absolute;
+    top: 0;
+    right: -36px;
+    // Block model
+    width: 26px;
+    height: 26px;
+    z-index: 1;
+    // Typography
+    font-size: 0;
+    // Stylization
+    opacity: 0.25;
+    background: url("/imgs/img_icon_feedback_close.svg") center no-repeat;
+    // Animation
+    transition: opacity ease-in .4s;
+
+    @media (max-width:460px) {
+      // Position
+      top: 20px;
+      left: 20px;
+    }
+
+    &:hover {
+      // Stylization
+      cursor: pointer;
+      opacity: .4;
+      outline: none;
+    }
+
+    &:focus {
+      // Stylization
+      opacity: 1 ;
+      outline: none;
+    }
+  }
+
+  &__form {
+    // Position
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    // Block model
+    width: 370px;
+    padding: 40px;
+    box-sizing: border-box;
+    // Stylization
+    background-color: $color_white;
+    border: solid 2px $color_black;
+
+    @media (max-width:370px) {
+      // Block model
+      width: 100%;
+      padding: 60px 20px 20px 20px;
+      // Stylization
+      border: none;
+    }
+
+  }
+
+  &__item {
+    // Position
+    display: flex;
+    flex-flow: column;
+    // Block model
+    width: 100%;
+  }
+
+  &__mark {
+    // Typography
+    color: $color_optional-4;
+  }
+
+  &__submit {
+    // Position
+    align-self: flex-start;
+  }
+
+}
+
+.data {
+  // Position
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  // Block model
+  width: 100%;
+  height: 100%;
+  // Stylization
+  background-color: $color_optional-0;
+
+  &__wrap {
+    // Position
+    position: relative;
+
+    @media (max-width: 580px) {
+      // Block model
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+  }
+
+  &__title {
+    // Typography
+    font-size: 0;
+  }
+
+  &__close {
+    // Position
+    position: absolute;
+    top: 0;
+    right: -36px;
+    // Block model
+    width: 26px;
+    height: 26px;
+    z-index: 1;
+    // Typography
+    font-size: 0;
+    // Stylization
+    opacity: 0.25;
+    background: url("/imgs/img_icon_feedback_close.svg") center no-repeat;
+    // Animation
+    transition: opacity ease-in .4s;
+
+    @media (max-width:580px) {
+      // Position
+      top: 20px;
+      left: 20px;
+    }
+
+    &:hover {
+      // Stylization
+      cursor: pointer;
+      opacity: .4;
+      outline: none;
+    }
+
+    &:focus {
+      // Stylization
+      opacity: 1 ;
+      outline: none;
+    }
+  }
+
+  &__form {
+
+    // Position
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    // Block model
+    width: 680px;
+    padding: 40px;
+    box-sizing: border-box;
+    // Stylization
+    background-color: $color_white;
+    border: solid 2px $color_black;
+
+    @media (max-width:768px) {
+      // Block model
+      width: 100%;
+    }
+
+    @media (max-width:580px) {
+      // Block model
+      width: 100%;
+      padding: 60px 20px 20px 20px;
+      // Stylization
+      border: none;
+    }
+
+  }
+
+  &__item {
+    // Position
+    display: flex;
+    flex-flow: column;
+    // Block model
+    width: 100%;
+    box-sizing: border-box;
+
+    &:nth-child(odd) {
+      // Block model
+      margin-right: 20px;
+    }
+
+    &--shortened {
+      // Block model
+      width: 48%;
+
+      @media (max-width:768px) {
+        // Block model
+        width: auto;
+      }
+    }
+  }
+
+  &__container {
+    // Position
+    display: flex;
+    flex-flow: row nowrap;
+
+    @media (max-width: 460px) {
+      // Position
+      flex-flow: column;
+    }
+  }
+
+  &__submit {
+    // Position
+    align-self: flex-start;
+  }
+
+}
+
+.message {
+  // Position
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  // Block model
+  width: 100%;
+  height: 100%;
+  // Stylization
+  background-color: $color_optional-0;
+
+  @media (max-width:370px) {
+    // Block model
+    width: 100%;
+    height: 100%;
+  }
+
+  &__wrap {
+    // Position
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 580px) {
+      // Block model
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    // Typography
+    font-size: 0;
+  }
+
+  &__close {
+    // Position
+    position: absolute;
+    top: 0;
+    right: -36px;
+    // Block model
+    width: 26px;
+    height: 26px;
+    z-index: 1;
+    // Typography
+    font-size: 0;
+    // Stylization
+    opacity: 0.25;
+    background: url("/imgs/img_icon_feedback_close.svg") center no-repeat;
+    // Animation
+    transition: opacity ease-in .4s;
+
+    @media (max-width:580px) {
+      // Position
+      top: 20px;
+      left: 0;
+    }
+
+    &:hover {
+      // Stylization
+      cursor: pointer;
+      opacity: .4;
+      outline: none;
+    }
+
+    &:focus {
+      // Stylization
+      opacity: 1 ;
+      outline: none;
+    }
+  }
+
+  &__text {
+    // Block model
+    max-width: 480px;
+    // Typography
+    color: $color_optional-4;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+
+    @media (max-width:580px) {
+      // Typography
+      font-size: 18px;
+    }
+  }
+
+}

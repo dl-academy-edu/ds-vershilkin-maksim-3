@@ -2,6 +2,7 @@
 // @import "media.scss";
 // @import "mixins.scss";
 @import "components/buttons/buttons";
+@import "components/pagination/pagination";
 @import "components/header/header";
 @import "components/footer/footer";
 
@@ -112,6 +113,8 @@ ul, li {
   // Block model
   margin: 0 0 20px 0;
   padding: 14px;
+  // Typography
+  font-family: $font-primary;
   // Stylization
   border: 0;
   outline-offset: -2.5px;

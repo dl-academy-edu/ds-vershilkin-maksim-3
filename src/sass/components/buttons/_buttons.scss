@@ -50,4 +50,13 @@
     // Stylization
     background-color: $color_black;
   }
+
+  &:focus {
+    // Typography
+    color: $color_white;
+    // Stylization
+    background-color: $color_black;
+    // Stylization
+    outline: none;
+  }
 }
