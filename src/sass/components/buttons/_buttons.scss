@@ -60,3 +60,69 @@
     outline: none;
   }
 }
+
+.button-up {
+  // Position
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // Block model
+  width: 42px;
+  height: 42px;
+  // Typography
+  color: $color_white;
+  font-size: 0;
+  font-weight: bold;
+  font-family: $font-primary;
+  // Stylization
+  cursor: pointer;
+  border-radius: 25px;
+  border: solid 2px $color_black;
+  // Animation
+  transform: scale(0);
+  transition: color ease-in .4s,
+              background-color ease-in .4s,
+              transform ease-in .4s,
+              fill ease-in .4s;
+
+  &--visible {
+    // Animation
+    transform: scale(0.75);
+  }
+
+  &:hover {
+    // Typography
+    color: $color_black;
+    // Stylization
+    cursor: pointer;
+    background-color: $color_black;
+    // Animation
+    transform: scale(1);
+  }
+
+  &:hover > .button-up__svg {
+    // Stylization
+    fill: $color_white;
+  }
+
+  &__svg {
+    // Block model
+    width: 24px;
+    height: 14px;
+    // Stylization
+    fill: $color_black;
+  }
+
+  &__path {
+    // Stylization
+    fill: inherit;
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+
+    transition: fill ease-in .4s;
+  }
+
+}
