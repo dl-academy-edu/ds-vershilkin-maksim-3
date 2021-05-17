@@ -1,4 +1,4 @@
-export {scrollTop}
+export {scrollTop, showModal}
 
 function scrollTop(buttonClass, modifierName, heightIndicator = (document.body.clientHeight * 0.2)) {
 
@@ -50,5 +50,51 @@ function scrollTop(buttonClass, modifierName, heightIndicator = (document.body.c
       behavior: 'smooth'
     });
   }
+
+}
+
+function showModal(elementClass, modalClass, modalModifier, closeClass) {
+
+  // Static variables.
+  const mainButton = document.querySelector(`.${elementClass}`);
+  const form = document.querySelector(`.${modalClass}`);
+  const formModifier = document.querySelector(`.${modalModifier}`);
+  const closeButton = document.querySelector(`.${closeClass}`);
+
+  // Main function.
+  mainButton.addEventListener('click', function(e) {
+
+    form.style.top = `${window.pageYOffset}px`;
+    form.classList.add(`${modalClass}${modalModifier}`);
+    document.body.style.overflow = 'hidden';
+
+    closeButton.addEventListener('click', hideModal);
+    window.addEventListener('keydown', hideEscModal);
+
+    // Close button event listener.
+    function hideModal(e) {
+
+      form.classList.remove(`${modalClass}${modalModifier}`);
+      document.body.style.overflow = '';
+      closeButton.removeEventListener('click', hideModal);
+
+    }
+
+    // Esc button event listener.
+    function hideEscModal(e) {
+
+      if (e.keyCode == 27 ) {
+
+        form.classList.remove(`${modalClass}${modalModifier}`);
+        document.body.style.overflow = '';
+        closeButton.removeEventListener('click', hideModal);
+
+      } else {
+        return;
+      }
+
+    }
+
+  })
 
 }

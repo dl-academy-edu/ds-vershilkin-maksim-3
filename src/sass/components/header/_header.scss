@@ -64,6 +64,38 @@
     }
   }
 
+  &__sign {
+    // Typography
+    color: $color_optional-1;
+    font-size: 16px;
+    font-family: $font-primary;
+    // Animation
+    transition: color ease-in .4s;
+
+    &:hover {
+      // Typography
+      color: $color_black;
+      // Stylization
+      cursor: pointer;
+    }
+  }
+
+  &__registration {
+    // Typography
+    color: $color_optional-1;
+    font-size: 16px;
+    font-family: $font-primary;
+    // Animation
+    transition: color ease-in .4s;
+
+    &:hover {
+      // Typography
+      color: $color_black;
+      // Stylization
+      cursor: pointer;
+    }
+  }
+
   &__mobile {
     // Position
     position: fixed;
