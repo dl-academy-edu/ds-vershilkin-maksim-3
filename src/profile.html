@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="keywords" content="танцы, рисование, изобразительное искусство, актёрское мастерство, хореография, музыка">
+  <link href="./css/common.css" rel="preload" onload="this.rel='stylesheet'" as="style" media="all"/>
+  <link href="./css/common.css" rel="stylesheet" />
+  <link href="./css/pages/profile.css" rel="preload" onload="this.rel='stylesheet'" as="style" media="all"/>
+  <link href="./css/pages/profile.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="/imgs/img_icon_favicon.svg">
+  <meta name="description" content="Главная страница личного проекта.">
+  <title>Главная страница личного проекта.</title>
+</head>
+<body>
+
+  <include src="./src/sass/components/header/header.html"></include>
+
+  <main class="main">
+
+    <section class="subheader">
+
+      <div class="subheader__wrap container">
+
+        <div class="subheader__about">
+
+          <h1 class="subheader__title title">
+            Мой профиль
+          </h1>
+
+          <button class="subheader__button" type="button" name="button">
+            Мобильное меню
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="information">
+
+      <div class="information__wrap container">
+
+        <picture class="information__photo">
+
+          <img class="information__image" src="/imgs/img_icon_photo.svg" alt="Значок фотографии">
+
+        </picture>
+
+        <form class="information__form" action="index.html" method="post">
+
+          <div class="information__list">
+
+            <div class="information__list-item">
+
+              <label class="information__label" for="data-name">
+                Имя:
+              </label>
+
+              <input class="information__input" id="data-name" type="text" name="name" value="" placeholder="Имя">
+
+            </div>
+
+            <div class="information__list-item">
+
+              <label class="information__label" for="data-surname">
+                Фамилия:
+              </label>
+
+              <input class="information__input" id="data-surname" type="text" name="name" value="" placeholder="Фамилия">
+
+            </div>
+
+            <div class="information__list-item">
+
+              <label class="information__label" for="data-mail">
+                Почта:
+              </label>
+
+              <input class="information__input" id="data-mail" type="mail" name="name" value="" placeholder="mypost@mail.com">
+
+            </div>
+
+            <div class="information__list-item">
+
+              <label class="information__label" for="data-password">
+                Пароль:
+              </label>
+
+              <input class="information__input" id="data-password" type="password" name="name" value="" placeholder="Введите пароль">
+
+            </div>
+
+            <div class="information__list-item">
+
+              <label class="information__label" for="data-location">
+                Местоположение:
+              </label>
+
+              <input class="information__input" id="data-location" type="text" name="name" value="" placeholder="Город">
+
+            </div>
+
+            <div class="information__list-item">
+
+              <label class="information__label" for="data-age">
+                Возраст:
+              </label>
+
+              <input class="information__input" id="data-age" type="text" name="name" value="" placeholder="18">
+
+            </div>
+
+            <button class="information__button button-optional" type="button" name="button">Изменить пароль</button>
+
+            <button class="information__button button-optional" type="button" name="button">Изменить другие данные</button>
+
+            <button class="information__button button-optional" type="button" name="button">Удалить аккаунт</button>
+
+          </div>
+
+        </form>
+
+        <!-- <ul class="information__list">
+
+          <li class="information__list-item">
+            <span class="infomation__list-type">Имя: </span>Максим
+          </li>
+
+        </ul> -->
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <section class="pass">
+
+    <div class="pass__wrap container">
+
+      <h2 class="pass__title title">
+        Форма смены пароля
+      </h2>
+
+      <button class="pass__close" type="button" name="button">
+        Закрыть форму
+      </button>
+
+      <form class="pass__form" action="index.html" method="post">
+
+        <div class="pass__item">
+
+          <label class="pass__label label" for="pass-previous">
+            Старый пароль
+            <sup class="pass__mark">*</sup>
+          </label>
+
+          <input class="pass__input input" id="pass-previous" type="text" name="previous" value="">
+
+        </div>
+
+        <div class="pass__item">
+
+          <label class="pass__label label" for="pass-new">
+            Новый пароль
+            <sup class="pass__mark">*</sup>
+          </label>
+
+          <input class="pass__input input" id="pass-new" type="text" name="previous" value="">
+
+        </div>
+
+        <div class="pass__item">
+
+          <label class="pass__label label" for="pass-confirm">
+            Повторите пароль
+            <sup class="pass__mark">*</sup>
+          </label>
+
+          <input class="pass__input input" id="pass-confirm" type="text" name="previous" value="">
+
+        </div>
+
+        <button class="pass__submit button-optional" type="sumbit" name="button">
+          Сменить пароль
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <section class="data">
+
+    <div class="data__wrap container">
+
+      <h2 class="data__title title">
+        Форма смены пароля
+      </h2>
+
+      <button class="data__close" type="button" name="button">
+        Закрыть форму
+      </button>
+
+      <form class="data__form" action="index.html" method="post">
+
+        <div class="data__item">
+
+          <label class="data__label label" for="data-mail">
+            Почта
+          </label>
+
+          <input class="data__input input" id="data-mail" type="text" name="mail" value="">
+
+        </div>
+
+        <div class="data__container">
+
+          <div class="data__item">
+
+            <label class="data__label label" for="data-name">
+              Имя
+            </label>
+
+            <input class="data__input input" id="data-name" type="text" name="name" value="">
+
+          </div>
+
+          <div class="data__item">
+
+            <label class="data__label label" for="data-surname">
+              Фамилия
+            </label>
+
+            <input class="data__input input" id="data-surname" type="text" name="surname" value="">
+
+          </div>
+
+        </div>
+
+        <div class="data__container">
+
+          <div class="data__item">
+
+            <label class="data__label label" for="data-location">
+              Местоположение
+            </label>
+
+            <input class="data__input input" id="data-location" type="text" name="location" value="">
+
+          </div>
+
+          <div class="data__item">
+
+            <label class="data__label label" for="data-age">
+              Возраст
+            </label>
+
+            <input class="data__input input" id="data-age" type="text" name="age" value="">
+
+          </div>
+
+        </div>
+
+        <div class="data__item data__item--shortened">
+
+          <label class="data__label label" for="data-image">
+            Изображения профиля
+          </label>
+
+          <input class="data__input data__input--file input" id="data-image" type="file" name="image" value="">
+
+        </div>
+
+        <button class="button-optional data__submit" type="sumbit" name="button">
+          Применить изменения
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <section class="message">
+
+    <div class="message__wrap container">
+
+      <h2 class="message__title title">
+        Статус отправки формы
+      </h2>
+
+      <button class="message__close" type="button" name="button">
+        Закрыть форму
+      </button>
+
+      <p class="message__text">Форма была отправлена, но сервер передал сообщение об ошибке: "Описание ошибки".</p>
+
+    </div>
+
+  </section>
+  
+  <script type="module" src="./js/index.js"></script>
+
+</script>
+
+</html>

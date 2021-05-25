@@ -18,6 +18,34 @@
 
   <main class="main">
 
+    <section class="subheader">
+
+      <div class="subheader__wrap container">
+
+        <div class="subheader__about">
+
+          <h1 class="subheader__title title">
+            Максим<br>Вершилкин
+          </h1>
+
+          <div class="subheader__bio">
+
+            <p class="subheader__text">
+              Будущий багработчик, 31 год, Тольятти
+            </p>
+
+            <button class="subheader__button" type="button" name="button">
+              Мобильное меню
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
     <section class="slider">
 
       <div class="slider__wrap container">
@@ -264,10 +292,10 @@
         <form class="intake__form" action="index.html" method="post">
 
           <label class="label intake__label" for="mail">Почта<sup class="intake__mark">*</sup></label>
-          <input class="input intake__input" id="mail" type="text" name="mail" value="">
+          <input class="input intake__input" id="mail" type="email" name="mail" value="">
 
           <label class="label intake__label" for="pass">Пароль<sup class="intake__mark">*</sup></label>
-          <input class="input intake__input" id="pass" type="text" name="password" value="">
+          <input class="input intake__input" id="pass" type="password" name="password" value="">
 
           <button class="button-optional intake__button" type="submit" name="button">Войти</button>
 
@@ -329,7 +357,7 @@
               Пароль <sup class="registration__mark">*</sup>
             </label>
 
-            <input class="input registration__input" id="reg_pass" type="text" name="pass" value="">
+            <input class="input registration__input" id="reg_pass" type="password" name="pass" value="">
 
           </div>
 
@@ -339,7 +367,7 @@
             Подтверидите пароль <sup class="registration__mark">*</sup>
           </label>
 
-          <input class="input registration__input" id="reg_repeat" type="text" name="repeat" value="">
+          <input class="input registration__input" id="reg_repeat" type="password" name="repeat" value="">
 
         </div>
 
@@ -371,14 +399,97 @@
 
         <div class="registration__agreement">
 
-          <input class="registration__agreement-input" id="reg_processing" type="checkbox" name="processing" value="">
+          <input class="registration__agreement-input" id="reg_processing" type="checkbox" name="processing" value="no">
           <label class="registration__agreement-label" for="reg_processing">
-            Clicking on the button, you consent to the processing of your personal data.
+            Нажимая на кнопку, Вы соглашаетесь с обраткой персональных данных.
           </label>
 
         </div>
 
-        <button class="button-optional registration__button registration__button--disabled" type="submit" name="button">Готово</button>
+        <button class="button-optional registration__button" type="submit" name="button">Готово</button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <section class="message">
+
+    <div class="message__wrap container">
+
+      <h2 class="message__title title">Отправить сообщение</h2>
+
+      <button class="message__close" type="button" name="message-close">Закрыть форму</button>
+
+      <form class="message__form" action="index.html" method="post">
+
+        <div class="message__line">
+
+          <div class="message__item">
+
+            <label class="message__label label" for="message-name">
+              Как Вас зовут? <sup class="message__mark">*</sup>
+            </label>
+
+            <input class="message__input input" id="message-name" type="text" name="name" value="">
+
+          </div>
+
+          <div class="message__item">
+
+            <label class="message__label label" for="message-subject">
+              Тема сообщения <sup class="message__mark">*</sup>
+            </label>
+
+            <input class="message__input input" id="message-subject" type="text" name="name" value="">
+
+          </div>
+
+        </div>
+
+        <div class="message__line">
+
+          <div class="message__item">
+
+            <label class="message__label label" for="message-mail">
+              Ваша почта <sup class="message__mark">*</sup>
+            </label>
+
+            <input class="message__input input" id="message-mail" type="email" name="name" value="">
+
+          </div>
+
+          <div class="message__item">
+
+            <label class="message__label label" for="message-phone">
+              Номер телефона <sup class="message__mark">*</sup>
+            </label>
+
+            <input class="message__input input" id="message-phone" type="text" name="name" value="">
+
+          </div>
+
+        </div>
+
+        <div class="message__item message__item--wide">
+
+          <label class="label message__label" for="message-text">Что бы Вы хотели обсудить?</label>
+
+          <textarea class="message__text input" id="message-text" name="name" rows="8" cols="80"></textarea>
+
+        </div>
+
+        <div class="message__agreement">
+
+          <input class="message__agreement-input" id="message-processing" type="checkbox" name="processing" value="">
+          <label class="message__agreement-label" for="message-processing">
+            Нажимая на кнопку, Вы соглашаетесь с обраткой персональных данных.
+          </label>
+
+        </div>
+
+        <button class="button-optional message__button" type="submit" name="button">Отправить</button>
 
       </form>
 

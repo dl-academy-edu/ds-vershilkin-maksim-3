@@ -1,0 +1,817 @@
+// Blog
+@import "../common.scss";
+
+.subheader {
+
+  &__about {
+    // Position
+    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  &__title {
+    // Block model
+    margin: 0 0 40px 0;
+    // Typography
+    text-align: left;
+    font-size: 47px;
+    font-weight: bold;
+
+    @media (max-width:500px) {
+      // Block model
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__button {
+    // Position
+    display: none;
+    // Block model
+    width: 38px;
+    height: 20px;
+    // Typography
+    font-size: 0;
+    // Stylization
+    background: url("/imgs/img_icon_mobile.svg") center no-repeat;
+
+    @media (max-width:500px) {
+      // Position
+      display: block;
+      // justify-content: flex-end;
+      // flex: 1;
+    }
+  }
+
+}
+
+.filter {
+
+  &__input {
+
+    &--tag {
+      // Stylization
+      border: solid 2px red;
+    }
+
+  }
+
+  &__settings {
+    // Position
+    display: grid;
+    grid-template-areas: "tags main button";
+    align-items: flex-start;
+    justify-content: space-between;
+    // Block model
+    margin: 0 0 35px 0;
+
+    @media (max-width: 1180px) {
+      // Position
+      grid-template-areas: "main main main main"
+                           "tags button button button";
+    }
+
+    @media (max-width: 768px) {
+      // Position
+      grid-template-areas: "main main main main"
+                           "tags button button button";
+    }
+
+    &-tags {
+      // Position
+      grid-area: tags;
+    }
+
+    &-main {
+      // Position
+      grid-area: main;
+      display: grid;
+      grid-template-areas: "views comments type sort";
+
+      @media (max-width: 640px) {
+        // Block model
+        grid-template-areas: "comments views"
+                             "sort type";
+      }
+
+    }
+
+    &-item {
+      // Block model
+      margin-right: 70px;
+
+      @media (max-width: 768px) {
+        // Block model
+        margin-right: 30px;
+      }
+
+      @media (max-width:640px) {
+        // Block model
+        margin-bottom: 30px;
+      }
+
+      @media (max-width:640px) {
+        // Block model
+        margin-bottom: 25px;
+      }
+
+      &:nth-child(2) {
+        // Position
+        grid-area: "views";
+      }
+
+      &:nth-child(3) {
+        // Position
+        grid-area: "comments";
+      }
+
+      &:nth-child(4) {
+        // Position
+        grid-area: "type";
+      }
+
+      &:nth-child(5) {
+        // Position
+        grid-area: "sort";
+      }
+
+    }
+
+    &-field {
+      // Block model
+      padding: 0;
+      // Stylization
+      border: none;
+    }
+
+    &-legend {
+      // Block model
+      margin: 0 0 10px 0;
+      // Typography
+      font-size: 14px;
+    }
+
+    &-list {
+      // Position
+      display: flex;
+      flex-flow: column;
+    }
+
+    &-tags {
+      // Position
+      position: relative;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      justify-content: flex-start;
+    }
+
+    &-view {
+      // Position
+      position: relative;
+      display: flex;
+      align-items: center;
+      // BLock model
+      margin: 0 0 10px 0;
+    }
+
+    &-comment {
+      // Position
+      position: relative;
+      display: flex;
+      align-items: center;
+      // BLock model
+      margin: 0 0 10px 0;
+    }
+
+    &-type {
+      // Position
+      position: relative;
+      display: flex;
+      align-items: center;
+      // BLock model
+      margin: 0 0 10px 0;
+    }
+
+    &-sort {
+      // Position
+      position: relative;
+      display: flex;
+      align-items: center;
+      // BLock model
+      margin: 0 0 10px 0;
+    }
+
+    &-label {
+
+      &:hover {
+        // Stylization
+        cursor: pointer;
+      }
+
+      &::after {
+        // Position
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        // Blockm model
+        width: 13px;
+        height: 13px;
+        // Stylization
+        border-radius: 11px;
+        background-color: $color_optional-2;
+        opacity: 0;
+        // Animation
+        transition: opacity ease-in .4s,
+                    background-color ease-in .4s;
+      }
+
+      &::before {
+        // Position
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        // Blockm model
+        width: 19px;
+        height: 19px;
+        // Stylization
+        border-radius: 13px;
+        border: solid 2px $color_optional-2;
+        // Animation
+        transition: opacity ease-in .4s,
+                    border-color ease-in .4s;
+      }
+
+      &--tag {
+        // Position
+        position: relative;
+        // Block model
+        width: 17px;
+        height: 17px;
+        margin: 0 5px 5px 0;
+        // Typography
+        font-size: 0;
+        // Stylization
+        border-radius: 2px;
+        border: solid 2px $color_black;
+
+        &::before {
+          // Position
+          display: none;
+        }
+
+        // &::after {
+        //   // Position
+        //   content: '';
+        //   position: absolute;
+        //   top: 1px;
+        //   left: 1px;
+        //   // Block model
+        //   width: 15px;
+        //   height: 15px;
+        //   // Stylization
+        //   background-color: none;
+        // }
+
+        &[name="tag-1"] {
+          // Stylization
+          border: solid 2px $color_tag-1;
+        }
+
+        &[name="tag-2"] {
+          // Stylization
+          border: solid 2px $color_tag-2;
+        }
+
+        &[name="tag-3"] {
+          // Stylization
+          border: solid 2px $color_tag-3;
+        }
+
+        &[name="tag-4"] {
+          // Stylization
+          border: solid 2px $color_tag-4;
+        }
+
+        &[name="tag-5"] {
+          // Stylization
+          border: solid 2px $color_tag-5;
+        }
+
+        &[name="tag-6"] {
+          // Stylization
+          border: solid 2px $color_tag-6;
+        }
+
+        &[name="tag-7"] {
+          // Stylization
+          border: solid 2px $color_tag-7;
+        }
+
+        &[name="tag-8"] {
+          // Stylization
+          border: solid 2px $color_tag-8;
+        }
+
+      }
+
+      &--square {
+
+        &::after {
+          // Position
+          top: 0;
+          left: 0;
+          // Block model
+          width: 23px;
+          height: 23px;
+          // Stylization
+          border-radius: 0;
+          background: url("/imgs/img_icon_checkmark.svg") center no-repeat;
+        }
+
+        &::before {
+          // Stylization
+          border-radius: 3px;
+        }
+
+      }
+
+    }
+
+    &-input {
+
+      &--tag {
+        // Position
+        position: absolute;
+        top: 0;
+        left: 0;
+        // Block model
+        width: 21px;
+        height: 21px;
+        margin: 0;
+        z-index: 1;
+        // Stylization
+        opacity: 0;
+
+        &:hover {
+          // Stylization
+          cursor: pointer;
+        }
+
+        &:checked + .filter__settings-svg  {
+          // Stylization
+          opacity: 1;
+        }
+
+        @for $i from 1 through 4 {
+
+          &[name="tag-#{$i}"] {
+            // Position
+            left: #{($i - 1) * 26}px;
+          }
+
+        }
+
+        @for $i from 5 through 8 {
+          &[name="tag-#{$i}"] {
+            // Position
+            top: 29px;
+            left: #{($i - 5) * 26}px;
+          }
+        }
+
+      }
+
+      &--radio {
+        // Block model
+        width: 23px;
+        height: 23px;
+        margin: 0 12px 0 0;
+        // Stylization
+        opacity: 0;
+
+        &:checked + .filter__settings-label::after {
+          // Stylization
+          opacity: 1;
+          background-color: $color_black;
+        }
+
+        &:checked + .filter__settings-label::before {
+          // Stylization
+          opacity: 1;
+          border-color: $color_black;
+        }
+
+      }
+
+      &--checkbox {
+        // Block model
+        width: 23px;
+        height: 23px;
+        margin: 0 12px 0 0;
+        // Stylization
+        opacity: 0;
+
+        &:checked + .filter__settings-label::after {
+          // Stylization
+          opacity: 1;
+        }
+
+        &:checked + .filter__settings-label::before {
+          // Stylization
+          opacity: 1;
+          border-color: $color_black;
+        }
+
+
+      }
+
+    }
+
+    &-svg {
+      // Position
+      position: absolute;
+      top: 3px;
+      left: 5px;
+      // Block model
+      width: 15px;
+      height: 15px;
+      // Stylization
+      opacity: 0;
+
+      @for $i from 1 through 4 {
+
+        @if $i == 1 {
+
+          &:nth-of-type(#{$i}) {
+            // Position
+            left: #{(($i - 1) * 27) + 3}px;
+          }
+
+        } @else if $i == 2 {
+
+          &:nth-of-type(#{$i}) {
+            // Position
+            left: #{(($i - 1) * 27) + 2}px;
+          }
+
+        } @else {
+
+          &:nth-of-type(#{$i}) {
+            // Position
+            left: #{($i - 1) * 27}px;
+          }
+
+        }
+
+      }
+
+      @for $i from 5 through 8 {
+
+        @if $i == 5 {
+
+          &:nth-of-type(#{$i}) {
+            // Position
+            top: 30px;
+            left: #{(($i - 5) * 27) + 3}px;
+          }
+
+        } @else if $i == 6 {
+
+          &:nth-of-type(#{$i}) {
+            // Position
+            top: 30px;
+            left: #{(($i - 5) * 27) + 2}px;
+          }
+
+        } @else {
+
+          &:nth-of-type(#{$i}) {
+            // Position
+            top: 30px;
+            left: #{($i - 5) * 27}px;
+          }
+
+        }
+
+      }
+
+      &:nth-of-type(1) > path {
+        // Stylization
+        fill: none;
+        stroke: $color_tag-1;
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+
+      &:nth-of-type(2) > path {
+        // Stylization
+        fill: none;
+        stroke: $color_tag-2;
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+
+      &:nth-of-type(3) > path {
+        // Stylization
+        fill: none;
+        stroke: $color_tag-3;
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+
+      &:nth-of-type(4) > path {
+        // Stylization
+        fill: none;
+        stroke: $color_tag-4;
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+
+      &:nth-of-type(5) > path {
+        // Stylization
+        fill: none;
+        stroke: $color_tag-5;
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+
+      &:nth-of-type(6) > path {
+        // Stylization
+        fill: none;
+        stroke: $color_tag-6;
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+
+      &:nth-of-type(7) > path {
+        // Stylization
+        fill: none;
+        stroke: $color_tag-7;
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+
+      &:nth-of-type(8) > path {
+        // Stylization
+        fill: none;
+        stroke: $color_tag-8;
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+
+    }
+
+    &-button {
+      // Position
+      grid-area: button;
+      align-self: center;
+      justify-self: flex-start;
+    }
+
+  }
+
+  &__search {
+    // Position
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    // Block model
+    margin-bottom: 20px;
+
+    @media (max-width: 380px) {
+      // Position
+      flex-flow: column;
+    }
+
+    &-text {
+      // Block model
+      width: 100%;
+      margin-right: 30px;
+      padding: 0 15px;
+      box-sizing: border-box;
+      // Typography
+      font-family: $font-primary;
+      font-size: inherit;
+      // Stylization
+      border: $color_optional-2 1px solid;
+      // Animation
+      transition: border-color ease-in .4s;
+
+      @media (max-width: 380px) {
+        // Block model
+        margin-bottom: 20px;
+        padding: 10px 20px;
+      }
+
+      &:focus {
+        // Stylization
+        outline: none;
+        border: $color_black 1px solid;
+      }
+
+    }
+
+    &-button {
+
+      @media (max-width: 380px) {
+        // Position
+        align-self: flex-end;
+      }
+
+    }
+
+  }
+
+}
+
+.articles {
+
+  &__article {
+    // Block model
+    margin-bottom: 20px;
+    padding-top: 20px;
+
+    // Stylization
+    border-top: solid 1px $color_optional-2;
+
+    &-wrap {
+      // Position
+      display: flex;
+      flex-flow: row nowrap;
+
+      @media (max-width:540px) {
+        // Position
+        flex-flow: column;
+      }
+
+    }
+
+    &-photo {
+      // Position
+      flex: 0 0 320px;
+      // Block model
+      margin: 0 20px -4px 0;
+
+      @media (max-width:768px){
+          // Position
+          flex: 0 0 50%;
+          // Block model
+          height: auto;
+      }
+
+      @media (max-width:480px){
+          // Block model
+          width: 100%;
+          height: auto;
+      }
+
+    }
+
+    &-image {
+      // Block model
+      width: 100%;
+
+      @media (max-width:380px) {
+          // Block model
+          width: 100%;
+      }
+
+    }
+
+    &-information {
+      // Block model
+      padding: 20px 0 0 0;
+    }
+
+    &-tags {
+      // Position
+      display: flex;
+      // Block model
+      margin-bottom: 10px;
+
+    }
+
+    &-tag {
+      // Block model
+      width: 30px;
+      height: 10px;
+      margin-right: 5px;
+      // Stylization
+      border-radius: 15px;
+      background-color: $color_optional-2;
+
+      // @for $i from 1 through 8 {
+      //
+      //   &--color-#{$i}: {
+      //     background-color: red;
+      //   }
+      //
+      // }
+
+      &--color-1 {
+        background: $color_tag-1;
+      }
+
+      &--color-2 {
+        background: $color_tag-2;
+      }
+
+      &--color-3 {
+        background: $color_tag-3;
+      }
+
+      &--color-4 {
+        background: $color_tag-4;
+      }
+
+      &--color-5 {
+        background: $color_tag-5;
+      }
+
+      &--color-6 {
+        background: $color_tag-6;
+      }
+
+      &--color-7 {
+        background: $color_tag-7;
+      }
+
+      &--color-8 {
+        background: $color_tag-8;
+      }
+
+    }
+
+    &-indicators {
+      // Position
+      display: flex;
+      // Block model
+      margin-bottom: 15px;
+      // Typography
+      color: $color_optional-1;
+      font-size: 14px;
+
+      &-item {
+        // Block model
+        margin-right: 10px;
+      }
+    }
+
+    &-title {
+      // Block model
+      margin-bottom: 10px;
+      // Typography
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    &-text {
+      // Block model
+      margin-bottom: 20px;
+      // Typography
+      font-size: 18px;
+    }
+
+    &-link {
+      // Position
+      position: relative;
+      // Typography
+      color: inherit;
+      font-size: 18px;
+      font-weight: 700;
+
+      &::after {
+        // Position
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        // Block model
+        width: 100%;
+        height: 1px;
+        // Stylization
+        border-bottom: dashed 1px $color_black;
+      }
+    }
+
+  }
+
+}
+
+.pagination {
+  // Block model
+  margin: 0 0 60px 0;
+
+  @media (max-width: 480px) {
+    // Block model
+    margin: 0 0 40px 0;
+  }
+}
+
+.footer {
+  // Stylization
+  background-color: $color_optional-3;
+}
